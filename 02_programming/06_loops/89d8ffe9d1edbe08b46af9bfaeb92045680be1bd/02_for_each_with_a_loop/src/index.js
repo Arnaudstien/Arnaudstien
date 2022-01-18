@@ -1,7 +1,19 @@
-function forEachLoop() {
-  // Code the function here.
+const array = [1, 2, 3, 4];
+
+function forEachLoop(array, log) {
+  for (const tour of array){
+    log(tour);
+  }
+}
+
+function log(array) {
+  console.log(`- ${array}`);
 
 }
 
-// Do not remove the following lines, it is for tests
+
+
+
+
 module.exports = forEachLoop;
+

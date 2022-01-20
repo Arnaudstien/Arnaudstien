@@ -1,14 +1,12 @@
 const readyForm = (reader) => {
   //reader.question("What is your name? ", (name) => {
   //  console.log(`Hello ${name}!`);
+  console.log(`Yes Im  ${answer}!`);
 
-  reader.question("Are you ready for today ??!", (answer) => {
-    console.log(`Yes Im  ${answer}!`);
-
-    reader.question(`WOW, ${answer} ??!! Really Nice! Let's goo !!.`);
-    console.log("Nice! Let's goo !!.");
-    reader.close();
-  });
+  reader.question(`WOW, ${answer} ??!! Really Nice! Let's goo !!.`);
+  console.log("Nice! Let's goo !!.");
+  reader.close();
+  reader.question("Are you ready for today ??!", (answer) => {});
   // });
 };
 

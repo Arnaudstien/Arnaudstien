@@ -17,7 +17,7 @@ Here are the available answers of the program:
 - Too high: "Too high"
 - Success: "You won!"
 
-A full game sequence should look like this: 
+A full game sequence should look like this:
 
 ```
 Welcome!

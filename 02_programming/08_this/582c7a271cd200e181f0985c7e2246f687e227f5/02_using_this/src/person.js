@@ -5,7 +5,13 @@ const person = {
   fullname: function () {
     return `${this.firstname} ${this.lastname}`;
   },
-  // Complete here
+  name: "Abdel",
+  lastn: "Sadki",
+  age1: 42,
+  introduceMyself: function () {
+    return `Hello! I'm ${this.name} ${this.lastn} and I'm ${this.age1}.`;
+  },
 };
+person.introduceMyself();
 
 module.exports = person;

@@ -1,8 +1,7 @@
 // Code here
-//import makeAJoke from "./makeAJoke.js";
+
 //const Joke = require("awesome-dev-jokes");
-import Joke from "awesome-dev-jokes";
-//console.log(Joke.getRandomJoke());
+//import Joke from "awesome-dev-jokes";
 
 function makeAJoke() {
   return console.log(Joke.getRandomJoke());

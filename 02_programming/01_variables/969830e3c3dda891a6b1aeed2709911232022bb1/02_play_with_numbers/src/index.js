@@ -7,5 +7,10 @@ const bar = 28;
 // a constant called `sumResult`, bound to the sum of `foo` and `bar`;
 
 const sumResult = foo + bar;
+//console.log(sumResult);
+
 // a constant called `prodResult`, bound to the product of `bar` and `foo`.
-const prodReslult = "bar" * "foo";
+//const prodReslult = "bar" * "foo";
+
+const prodRelsult = bar * foo;
+//console.log(prodRelsult);

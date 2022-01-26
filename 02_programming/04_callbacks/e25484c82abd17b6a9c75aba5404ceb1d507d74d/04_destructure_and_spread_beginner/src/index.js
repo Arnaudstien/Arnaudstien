@@ -6,8 +6,6 @@ let knowledge = {
   knowsMongoDB: true,
   timeSpent: "10 weeks",
 };
-
-
 let student = {
   hasComputer: true,
   knowsTypescript: false,
@@ -16,19 +14,22 @@ let student = {
   knowsMongoDB: false,
   timeSpent: "4 days",
 };
-
-
 let developer = {
+  ...knowledge,
+  timeSpent: "10 weeks",
+  ...student,
+
   // code here
 };
-
-
+console.log(developer);
 
 let application = ["bug", "code", "code", "code", "code", "code", "code", "code", "code"];
 
+let [bug, ...rest] = application;
+
+let [code] = [rest];
 
 // code here
-
 
 module.exports = {
   developer,

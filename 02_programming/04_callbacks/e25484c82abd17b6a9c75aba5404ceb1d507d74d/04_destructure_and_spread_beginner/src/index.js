@@ -25,7 +25,7 @@ console.log(developer);
 
 let application = ["bug", "code", "code", "code", "code", "code", "code", "code", "code"];
 
-let [bug, ...rest] = application;
+let [bug, ...code] = application;
 
 let [code] = [rest];
 

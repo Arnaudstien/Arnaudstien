@@ -1,5 +1,12 @@
-function triangle() {
-  // Code here
+function triangle(array) {
+  let croix = "";
+  for (let i = 0; array.length; i++) {
+    croix = "*";
+  }
+
+  for (let i = 0; i < array.length; i++) {
+    console.log(array);
+  }
 }
 
 // Do not remove the following line, it is for tests

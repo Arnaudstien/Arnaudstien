@@ -2,6 +2,7 @@ function triangle(array) {
   let croix = "";
   for (let i = 0; array.length; i++) {
     croix = "*";
+    console.log(croix);
   }
 
   for (let i = 0; i < array.length; i++) {

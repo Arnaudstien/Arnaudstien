@@ -1,10 +1,28 @@
 function triangle(params) {
-  let iterable = "*********************";
-  for (let params of iterable) {
-    console.log(params);
+  let array = [
+    "",
+    "*",
+    "**",
+    "***",
+    "****",
+    "*****",
+    "******",
+    "*******",
+    "********",
+    "*********",
+    "**********",
+    "***********",
+    "************",
+    "*************",
+    "**************",
+    "***************",
+  ];
+  for (let i = 1; i <= params; i++) {
+    const element = array[i];
+    console.log(element);
   }
 }
 
-triangle(4);
+triangle(10);
 // Do not remove the following line, it is for tests
 module.exports = triangle;

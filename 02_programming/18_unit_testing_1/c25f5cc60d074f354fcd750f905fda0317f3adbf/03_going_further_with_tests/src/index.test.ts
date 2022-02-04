@@ -1,4 +1,4 @@
-let mockArray = [];
+let mockArray: string | any[] = [];
 let mockObject = {};
 
 beforeEach(() => {
@@ -50,7 +50,9 @@ describe("Let the tests on arrays begin !", () => {
     //console.log(mockArray.length <s5);
     expect(mockArray.length < 5).toBe(false);
   });
-
+});
+test("The list contains string elements", () => {
+  expect.assertions(1);
   // Create a test that checks if the array only contains String element.
   // Remember that a test is code, you are not limited to using `expect`.
   mockArray = [
@@ -60,7 +62,22 @@ describe("Let the tests on arrays begin !", () => {
     "Tombeau des lucioles",
     "fight club",
   ];
-  for (let i = 0; i <= mockArray.values.length; i++) console.log("=======================", i);
+  let flag = true;
+  for (let i = 0; i < mockArray.length; i++) {
+    const element = mockArray[i];
+    if (typeof element === "string") {
+      flag = true;
+    } else {
+      flag = false;
+      //console.log("p============================", flag);
+    }
+  }
+  //console.log(mockArray.length <s5);
+  expect(flag).toBe(true);
+});
+
+test("The list contains Lord of the rings elements", () => {
+  expect.assertions(1);
 
   // Create a test that passes if there's at least one film with "Lord of the rings" inside mockArray.
   mockArray = [
@@ -71,22 +88,72 @@ describe("Let the tests on arrays begin !", () => {
     "fight club",
   ];
 
-  //Create a test that checks if the elements in mockArray respect that the strings are the same with the right order as solutionArray
-  //eg : mockArray = ["Blue","Blue","Red", "Yellow"] would fail the test
+  let inside;
+  let notinside;
+  for (let i = 0; i < mockArray.length; i++) {
+    const element = mockArray[i];
+
+    const text = "Lord of the rings";
+    if (element.includes(text)) {
+      inside = true;
+    } else {
+      notinside = false;
+    }
+  }
+  expect(inside).toBe(true);
+});
+//Create a test that checks if the elements in mockArray respect that the strings are the same with the right order as solutionArray
+//eg : mockArray = ["Blue","Blue","Red", "Yellow"] would fail the test
+test("checks if the elements are the same", () => {
+  expect.assertions(1);
   mockArray = ["Blue", "Red", "Blue", "Yellow"];
   const solutionArray = ["Blue", "Red", "Blue", "Yellow"];
+  let trueelem;
+  let falseelme;
+  let result;
+  for (let i = 0; i < mockArray.length; i++) {
+    const element1 = mockArray[i];
+    for (let i = 0; i < solutionArray.length; i++) {
+      const element2 = solutionArray[i];
+
+      if (element1 === element2) {
+        trueelem = true;
+      } else {
+        falseelme = false;
+      }
+
+      if (trueelem === true && falseelme === false) {
+        result = false;
+      } else {
+        result = true;
+      }
+    }
+  }
+
+  expect(result).toBe(false);
 });
 
+// Create a test that ensures that your 'command' object contains at least `fries: true` and `sauce: "Hannibal"` without checking properties one by one
+// You should do it with only one assertion.
+// Hint: we want our mock object to _match_ another smaller object (look at the documentation!)
+
 describe("Let the tests on objects begin !", () => {
-  // Create a test that ensures that your 'command' object contains at least `fries: true` and `sauce: "Hannibal"` without checking properties one by one
-  // You should do it with only one assertion.
-  // Hint: we want our mock object to _match_ another smaller object (look at the documentation!)
-  mockObject = {
-    sauce: "Hannibal",
-    fries: true,
-    kebab: "Double",
-    soda: "Sprite",
-  };
+  test("checks if object contains at least `fries: true` and `sauce: Hannibal", () => {
+    expect.assertions(2);
+    mockObject = {
+      sauce: "Hannibal",
+      fries: true,
+      kebab: "Double",
+      soda: "Sprite",
+    };
+    console.log("=========================================", mockObject);
+    expect(mockObject).toHaveProperty("sauce");
+    expect(mockObject).toHaveProperty("fries");
+
+    //expect(mockObject).toBe();
+
+    console.log(mockObject);
+  });
 });
 
 //At the end, your file should contain 7 test (8 with the given example).

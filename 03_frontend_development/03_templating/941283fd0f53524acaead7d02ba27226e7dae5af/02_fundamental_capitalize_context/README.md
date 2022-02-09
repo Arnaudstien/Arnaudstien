@@ -2,7 +2,7 @@
 
 ## CONTEXT AND OBJECTIVES
 
-You are asked to transform a sentence by capitalizing every word in it.
+ou are asked to transform a sentence by capitalizing every word in it.
 
 You must use the function `capitalize` you did in the first part of the exercise.
 
@@ -21,7 +21,7 @@ It follows those specifications:
 ## EXAMPLES
 
 ```js
-context("you know nothing john snow.") // returns "You Know Nothing John Snow." 
+context("you know nothing john snow."); // returns "You Know Nothing John Snow."
 ```
 
 We provide you an `index.ts` file which `console.log` two calls of your function with `james pond` and `My name is pond, james pond. Underwater agent.` as an argument, so you can use `yarn start` to check that you have the right result:
@@ -29,5 +29,5 @@ We provide you an `index.ts` file which `console.log` two calls of your function
 ```shell-session
 $ yarn start # should print
 "James Pond"
-"My Name Is Pond, James Pond. Underwater Agent."
+"My Name Is Pond, James Pond. Underwater Agent."Y
 ```

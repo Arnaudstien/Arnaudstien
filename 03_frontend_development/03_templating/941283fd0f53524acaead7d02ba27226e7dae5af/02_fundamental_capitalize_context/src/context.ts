@@ -1,5 +1,8 @@
-import { capitalize } from "./capitalize"
+import { capitalize } from "./capitalize";
 
 export function context(sentence: string): string {
-  // Code here and use the function `capitalize` from exercise one
+  const tableau = sentence.split(" ");
+  const array = tableau.map((word) => capitalize(word));
+
+  return array.join(" ").toString();
 }

@@ -1,0 +1,1 @@
+mongosh "mongodb+srv://cluster0.lzzw2.mongodb.net/myFirstDatabase" --apiVersion 1 --username first-database
